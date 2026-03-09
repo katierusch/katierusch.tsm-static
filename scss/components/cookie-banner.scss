@@ -1,0 +1,65 @@
+//this is just here so i can see the double border styling, ignore this pls
+.cookie-banner {
+    margin-top: 4rem;
+}
+
+//styles to copy start here
+.cookiebanner-inner {
+    background: #000;
+    padding: 1.5rem;
+    border-top: 4px solid $c-gold;
+    position: relative;
+    text-align: center;
+    color: $c-gold;
+    &:before {
+        content:'';
+        height: 1px;
+        width: 100%;
+        background-color: $c-gold;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        right: 0; 
+    }
+    p {
+        font-family: $f-neutra;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top: 0;
+        font-size: 1.25rem;
+    }
+    .actions {
+        display: flex;
+        justify-content: center;
+        button {
+            color: $c-gold;
+           // color: $c-lightgold;
+            font-family: $f-coliseum;
+            font-size: 1.5rem;
+            line-height: 1;
+            background: transparent;
+            border: 1px solid $c-gold;
+            outline: 0; 
+            padding: .6rem 3rem;
+            width: 45%;
+            @media (min-width: $bp-600) {
+                width: auto;
+            }
+            &:first-of-type {
+                margin-right: 1rem;
+            }
+            &:hover, &:focus {
+                background: $c-gold;
+                color: $c-black;
+            }
+        }
+    }
+    @media (min-width: $bp-600) {
+        .content, .actions {
+            display: inline-block;
+        }
+        .content {
+            margin-right: 1.5rem;
+        }
+    }
+}

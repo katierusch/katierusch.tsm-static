@@ -1,0 +1,167 @@
+//need containing div to add end pseudo elements to
+.button-container-primary {
+    width: 100%;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: 1rem;
+//    transition: all .25s;
+    //add divoted ends to button
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        background: url("../assets/img/elements/button-red-end.svg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 1rem;
+        top: 0;
+        bottom: 0;
+//        transition: all .25s;
+    }
+    &:before {
+        left:0;
+        transform: scaleX(-1)
+    }
+    &:after {
+        right: 0;
+    }
+     @media (min-width: $bp-600) {
+        display: inline-block;
+        width: auto;
+    }
+    
+    //actual button styles
+    .button-primary {
+        display: block;
+        width: 100%;
+        background: url("../assets/img/elements/button-red-bg.svg");
+        background-size: calc(100% - 1.5rem) 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: .75rem 1rem .5rem;
+//        outline: 0;
+        border: 0;
+        color: $c-lightgold;
+        font-family: $f-coliseum;
+        font-size: 1.5rem;
+        line-height: 1;
+        text-decoration: none;
+//        transition: all .25s;
+        position: relative;
+        //arrow pseudo. display inline prevents arrow from wrapping alone.
+            &:after {
+                content: $icon-arrow-right;
+                font-family: $f-tsmicons;
+                display: inline;
+                font-size: 1.25rem;
+                color: $c-gold;
+                margin-left: .25rem;
+            }
+       
+        &:focus {
+//            outline: 
+        }
+        @media (min-width: $bp-600) {
+            display: inline-block;
+            width: auto;
+        }
+    }
+    
+    //change divoted end svg on hover - color change. 
+    &:hover, &:focus, &:focus-within {
+        &:before, &:after {
+            background: url("../assets/img/elements/button-red-end-hover.svg");
+            background-size: 100% 100%;
+            bacgkround-repeat: no-repeat;
+        }
+        .button-primary {
+            background: url("../assets/img/elements/button-red-bg-hover.svg");
+            background-size: calc(100% - 1.5rem) 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+    }    
+}
+
+//need containing div to add pseudo elements to. 
+.button-container-gold {
+    width: 100%;
+    display: block;
+    position: relative;
+//    transition: all .25s;
+    //add divoted ends to buttons
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            background: url("../assets/img/elements/button-gold-end.svg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 1rem;
+            top: 0;
+            bottom: 0;
+//            transition: all .25s;
+        }
+    &:before {
+        left:0;
+        transform: scaleX(-1)
+    }
+    &:after {
+        right: 0;
+    }
+     @media (min-width: $bp-600) {
+        display: inline-block;
+        width: auto;
+    }
+    //hover style for button ends. changes svg because color changes. 
+    &:hover, &:focus, &:focus-within {
+        &:before, &:after {
+            background: url("../assets/img/elements/button-gold-end-hover.svg");
+            background-size: 100% 100%;
+            bacgkround-repeat: no-repeat;
+        }
+        .button-gold {
+            background: url("../assets/img/elements/button-gold-bg-hover.svg");
+            background-size: calc(100% - 1.5rem) 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    //button styles.
+    .button-gold {
+        display: block;
+        width: 100%;
+        background: url("../assets/img/elements/button-gold-bg.svg");
+        background-size: calc(100% - 1.5rem) 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: .75rem 1rem .5rem;
+//        outline: 0;
+        border: 0;
+        color: $c-maroon;
+        font-family: $f-coliseum;
+        font-size: 1.5rem;
+        line-height: 1;
+        text-decoration: none;
+//        transition: all .25s;
+        position: relative;
+        //arrow pseudo. display inline prevents arrow from wrapping alone.
+        &:after {
+                content: $icon-arrow-right;
+                font-family: $f-tsmicons;
+                display: inline;
+                font-size: 1.25rem;
+                color: $c-maroon;
+                margin-left: .25rem;
+            }
+        &:focus {
+//            outline: 
+        }
+        @media (min-width: $bp-600) {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,182 @@
+//Imported custom fonts
+//@font-face {
+//    font-family: 'Neutra Display';
+//    src: url('../../assets/fonts/NeutraDisp-Bold.woff2') format('woff2'),
+//        url('../../assets/fonts/NeutraDisp-Bold.woff') format('woff');
+//    font-weight: bold;
+//    font-style: normal;
+//}
+
+@font-face {
+    font-family: 'Coliseum Pro';
+    src: url('../../assets/fonts/ColiseumPro-Book.woff2') format('woff2'),
+        url('../../assets/fonts/ColiseumPro-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Horizontes Script';
+    src: url('../../assets/fonts/HorizontesScript-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/HorizontesScript-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Text';
+    src: url('../../assets/fonts/NeutraText-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/NeutraText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Text';
+    src: url('../../assets/fonts/NeutraText-Book.woff2') format('woff2'),
+        url('../../assets/fonts/NeutraText-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Text';
+    src: url('../../assets/fonts/NeutraText-BookItalic.woff2') format('woff2'),
+        url('../../assets/fonts/NeutraText-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'tsm-icons';
+  src:
+    url('../../assets/fonts/tsm-icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// base type styles
+h1, 
+h2,
+h3,
+h4, 
+h5,
+h6 {
+    color: $c-maroon;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: $f-coliseum;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: $f-coliseum;
+    text-transform: uppercase;
+    @include fluidTypeSize(3.5, 2.25)
+    line-height: .95;
+    &:after {
+        content: '';
+        background: url('../assets/img/elements/filigree.svg') no-repeat;
+        background-size: contain;
+        width: 8rem;
+        height: 1.25rem;
+        display: block;
+        margin-top: -.25rem;
+    }
+}
+
+h3 {
+    font-family: $f-coliseum;
+    text-transform: uppercase;
+    @include fluidTypeSize(2.75, 2.15)
+}
+
+h4 {
+    font-family: $f-neutra;
+    font-weight: bold;
+    @include fluidTypeSize(2, 1.25)
+}
+
+h5 {
+    font-family: $f-neutra;    
+    font-size: 1.35rem;
+}
+
+h6 {
+    font-family: $f-neutra;
+    color: $c-black;
+}
+
+p {
+    margin: 1rem 0;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+//    &:only-of-type {
+//        margin-bottom: 1rem;
+//    }
+}
+
+a {
+    color: $c-maroon;
+    text-decoration: underline;
+    &:hover, &:focus {
+        text-decoration: none;
+        color: $c-port;
+    }
+}
+
+.callout-link {
+    font-family: $f-neutra;
+    font-weight: bold;
+    color: $c-maroon;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    &:after {
+        content: $icon-arrowhead-right;
+        font-family: $f-tsmicons;
+        font-size: 1rem;
+        display: inline-block;
+        margin-left: .25rem;
+        text-decoration: none;
+    }
+}
+
+ul, ol {
+
+}
+
+blockquote {
+    position: relative;
+    padding-left: 2.5rem;
+    max-width: $bp-400;
+    margin: 2.5rem auto 2rem;
+    .quote-text {
+        color: $c-maroon;
+        font-family: $f-coliseum;
+        @include fluidTypeSize(2, 1.5);
+        text-transform: uppercase;
+        line-height: 1.25;
+    }
+    .quote-author {
+        font-family: $f-horizontes;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    &:before {
+        content: '\201C';
+        font-family: $f-coliseum;
+        font-size: 7rem;
+        color: $c-maroon;
+        position: absolute;
+        top: -2rem;
+        left: 0rem;
+    }
+}

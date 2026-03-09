@@ -1,0 +1,32 @@
+.press-release {
+    text-align: center;
+    .article-content {
+        text-align: left;
+        h5 {
+            margin-bottom: 0;
+        }
+    }
+    img {
+        max-width: 10rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    @media (min-width: $bp-600) {
+        text-align: left;
+    }
+    @media (min-width: $bp-bs-md) {
+        display: flex;
+        align-items: center;
+        .article-content {
+            width: 80%;
+        }
+        .img-container {
+            width: 20%;
+            margin-right: 2rem;
+            text-align: center;
+        }
+        img {
+//            margin-right: 2rem;
+        }
+    }
+}

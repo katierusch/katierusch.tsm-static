@@ -1,0 +1,34 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Thomas S. Moore</title>
+    <link rel="stylesheet" media="all" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="../css/main.css">
+</head>
+<body class="cookie-banner">
+   <sly data-sly-use.wcmModes="/libs/wcm/foundation/components/page/initwcm.js"></sly>
+    <div data-sly-use.model="com.sazerac.aem.global.core.models.CookieBanner"
+     class="cmp-cookiebanner"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.test="${!wcmModes.isTouchAuthoring}">
+    <div class="cookiebanner-inner">
+        <div class="content">
+            <p class="text">This website uses cookies.</p>
+            <!-- <a href="${model.privacyLink}" data-sly-test="${model.privacyLink && model.cookieText}" class="btn-link" id="cookie-manage">
+                <span>${model.cookieText}</span>
+            </a>
+            <a href="${model.privacyLink2}" data-sly-test="${model.privacyLink2 && model.cookieText2}" class="btn-link" id="cookie-manage2">
+                <span>${model.cookieText2}</span>
+            </a>       -->     
+        </div>
+        <div class="actions">
+            <button class="btn-cta" id="cookie-accept">
+                <span>Accept</span>
+            </button>
+            <button class="btn-cta" id="cookie-decline">
+                <span>Decline</span>
+            </button>
+        </div>
+    </div>
+</div>
+</body>

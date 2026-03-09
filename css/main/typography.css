@@ -1,0 +1,11 @@
+@font-face { font-family: 'Neutra Text'; src: url("../../assets/fonts/NeutraText-Bold.woff2") format("woff2"), url("../../assets/fonts/NeutraText-Bold.woff") format("woff"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Neutra Display'; src: url("../../assets/fonts/NeutraDisp-Bold.woff2") format("woff2"), url("../../assets/fonts/NeutraDisp-Bold.woff") format("woff"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Coliseum Pro'; src: url("../../assets/fonts/ColiseumPro-Book.woff2") format("woff2"), url("../../assets/fonts/ColiseumPro-Book.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Horizontes Script'; src: url("../../assets/fonts/HorizontesScript-Bold.woff2") format("woff2"), url("../../assets/fonts/HorizontesScript-Bold.woff") format("woff"); font-weight: bold; font-style: normal; }
+
+@font-face { font-family: 'Neutra Text'; src: url("../../assets/fonts/NeutraText-Book.woff2") format("woff2"), url("../../assets/fonts/NeutraText-Book.woff") format("woff"); font-weight: 500; font-style: normal; }
+
+@font-face { font-family: 'Neutra Text'; src: url("../../assets/fonts/NeutraText-BookItalic.woff2") format("woff2"), url("../../assets/fonts/NeutraText-BookItalic.woff") format("woff"); font-weight: 500; font-style: italic; }

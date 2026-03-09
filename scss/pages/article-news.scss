@@ -1,0 +1,132 @@
+//specific article page styling. some slight differences from article on press release page.
+
+//article page
+.page-article {
+    //max width to keep content from getting too long
+    .article-body {
+        max-width: $bp-700;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 3rem;
+        //mark up is h2 for semantics, but visually should look like an h3. 
+        h2 {
+            @include fluidTypeSize(2.75, 2.15)
+            &:after {
+                display: none;
+            }
+        }
+        //mark up is h3 for semantics, but visually should look like an h4. 
+        h3 {
+            @extend h4;
+            text-transform: none;
+            font-style: italic;
+            font-weight: normal;
+        }
+    }
+}
+
+
+//news page
+.page-news {
+    .news-listings {
+        max-width: $bp-800;
+    }
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+    .listing {
+        .date, .button-container-primary {
+            margin-bottom: 0;
+        }
+        .headline {
+            color: $c-maroon;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-top: 0;
+            font-family: $f-neutra;
+            text-transform: none;
+        }
+    }
+    .pagination {
+        text-align: center;
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 1.25rem;
+        a {
+            text-decoration: none;
+            border-bottom: 2px solid $c-maroon;
+            margin-right: .5rem;
+            padding: .25rem;
+//            &:last-of-type {
+//                margin-right: 0;
+//            }
+            &:hover, &:focus {
+                border-bottom: 0;
+            }
+        }
+        .current {
+            margin-right: .5rem;
+        }
+        .page-numbers {
+            display: inline-block;
+//            a, .current {
+//                position: relative;
+//                &:after {
+//                    content: "";
+//                    display: inline-block;
+//                    background: $c-maroon;
+//                    margin-left: .5rem;
+//                    border-bottom: 0;
+//                    text-decoration: none;
+//                    width: 1px;
+//                    height: 35px;
+//                    top: -5px;
+//                    position: absolute;
+//                }
+//                 &:last-child {
+//                    &:after {
+//                        display: none;
+//                    }
+//                }
+//            }
+           
+        }
+        .previous, .next {
+//            border-bottom: 0;
+            position: relative;
+//            text-decoration: underline;
+            &:before {
+                content: $icon-arrowhead-left;
+                font-family: $f-tsmicons;
+                font-size: .9rem;
+                color: $c-maroon;
+                position: absolute;
+                line-height: 1;
+                top:5px;
+                left: -1.25rem;
+                border-bottom: 0;
+            }
+          
+        }
+        .next {
+            &:before {
+                content: $icon-arrowhead-right;
+                left: auto;
+                right: -1.25rem;
+            }
+        }
+//        &:before, &:after {
+//            content: $icon-arrow-left;
+//            font-family: $f-tsmicons;
+//            color: $c-maroon;
+//            font-size: 1.25rem;
+//            margin-right: 1rem;
+//        }
+//        &:after {
+//            content: $icon-arrow-right;
+//            margin-right: 0;
+//            margin-left: 1rem;
+//        }
+    }
+}

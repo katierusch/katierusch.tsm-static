@@ -1,0 +1,138 @@
+
+.latest-releases-header {
+    background: url(../assets/img/photos/pr-header-m.jpg) no-repeat top left;
+    background-size: cover;
+    padding: 4rem 1rem 6rem 1rem;
+    position: relative;
+    margin-bottom: 2rem;
+    h2 {
+        color: $c-gold;
+    }
+    &:after {
+        content: '';
+        background: url(../assets/img/photos/pr-bottle-frame.png) no-repeat;
+        background-size: contain;
+        width: 14rem;
+        height: 17rem;
+        display: block;
+        position: absolute;
+        bottom: -5rem;
+        right: -1rem;
+    }
+    @media(min-width: $bp-600) {
+        background: url(../assets/img/photos/pr-header.jpg) no-repeat top left;
+        background-size: cover;
+        padding: 5rem 1rem 7rem .25rem;
+        &:after {
+            width: 17rem;
+            height: 20rem;
+            bottom: -5.5rem;
+            right: -1.5rem;
+        }
+    }
+    @media (min-width: $bp-bs-md) {
+        padding: 6rem 1rem 9rem 1rem;
+        &:after {
+            width: 29rem;
+            height: 35rem;
+            bottom: -16.6rem;
+            right: -2rem;
+        }
+    }
+    @media (min-width: $bp-1200) {
+        background: url("../assets/img/photos/pr-header-2x.jpg") no-repeat top left;
+        background-size: cover;
+    }
+}
+
+
+.page-press-release {
+    .press-media {
+        padding: 1rem 0;
+    }
+}
+
+
+//styling for article specific to this page
+.page-press-release {
+    .article-body {
+        margin-top: 3rem;
+        @media (min-width: $bp-bs-md) {
+            margin-top: 0;
+        }
+        h3 {
+            margin-bottom: 0;
+        }
+        h4 {
+            font-weight: normal;
+            font-style: italic;
+        }
+    }
+}
+//add black block and shield
+@media (min-width: $bp-bs-md) {
+    .page-press-release {
+        .page-main {
+            position: relative;
+            //black block
+            &:before {
+                content: '';
+                width: 15%;
+                height: 15rem;
+                background: url("../assets/img/photos/black-block.jpg") no-repeat;
+                background-size: cover;
+                display: block;
+                position: absolute;
+                right: 0rem;
+                top: 43rem;
+            }
+        }
+    }
+    //add shield
+    .press-media {
+         position: relative;
+        &:after {
+            content: '';
+            background: url(../assets/img/elements/shield-gold.svg) no-repeat;
+            background-size: contain;
+            width: 12rem;
+            height: 13rem;
+            position: absolute;
+            bottom: 15%;
+            right: 0;
+        }
+    }
+}
+
+@media (min-width: $bp-900) {
+    .press-media {
+        &:after {
+            right: 3rem;
+        }
+    }
+    .page-press-release {
+        .page-main {
+            &:before {
+                width: 12%;
+                height: 15rem;
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-1200) {
+    .press-media {
+        &:after {
+            right: 7rem;
+            width: 15rem;
+            height: 16rem;
+        }
+    }
+    .page-press-release {
+        .page-main {
+            &:before {
+                width: 18%;
+            }
+        }
+    }
+}

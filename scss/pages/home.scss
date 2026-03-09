@@ -1,0 +1,331 @@
+.page-home {
+    //bottle viewer sizing and positioning
+    .home-bottle-viewer {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        .bottle-viewer-container {
+            padding: 3rem 0 100%;
+            position: relative;
+            max-width: $bp-500;
+            margin: auto;
+            @media (min-width: $bp-600) {
+                padding: 3rem 0 33rem;
+            }
+        }
+        .tsm-logo {
+            z-index: 10;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 90%;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .bottle-primary {
+            z-index: 20;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 30%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .bottle-secondary {
+            z-index: 5;
+            position: absolute;
+            left: -1rem;
+            width: 20%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .bottle-right {
+            left: auto;
+            right: -1rem;
+        }
+        //bottle details
+        .current-bottle-details {
+            margin: 1rem auto;
+            max-width: $bp-300;
+            text-align: center;
+            font-size: 1rem;
+            .bottle-name {
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+            .bottle-details {
+                margin-bottom: .5rem;
+                margin-top: 0;
+            }
+            .bottle-link {
+                color: $c-black;
+            }
+        }
+        //bottle # indicator. visually different from expressions page, so no shared styling here.
+        .bottle-indicator {
+            text-align: center;
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            margin: auto;
+        }
+        //nav + details layout shift.
+        @media (min-width: $bp-bs-md) {
+            .current-bottle-details {
+                text-align: right;
+                position: absolute;
+                top: -2rem;
+                left: 2rem;
+                z-index: 40;
+                margin: 0;
+            }
+            .bottle-secondary {
+                left: 0;
+            }
+            .bottle-right {
+                left: auto;
+                right: 0;
+            }
+            .bottle-indicator {
+                position: absolute;
+                top: 2rem;
+                right: 35%;
+            }
+            .bottle-nav {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 96%;
+                max-width: $bp-800;
+                ul {
+                     justify-content: space-between;
+//                    li {
+//                        &:first-of-type {
+//                            margin-right: 34rem;
+//                        }
+//                    }
+                }
+            }
+        }
+        //bottle size increase.
+        @media (min-width: $bp-1100) {
+            margin-top: -9rem;
+            .bottle-viewer-container {
+                max-width: 48.75rem; //780px
+                padding: 0 0 54rem;
+            }
+            .bottle-indicator {
+                top: 6rem;
+                right: 19rem;
+            }
+            .current-bottle-details {
+                top: 5rem;
+                left: 7rem;
+            }
+            .bottle-secondary {
+                left: -2.5rem;
+                top: 54%;
+            }
+            .bottle-right {
+                right: -2.5rem;
+                left: auto;
+            }
+            .bottle-nav {
+                left: -4rem;
+                width: 113%;
+                max-width: $bp-1100;
+                ul {
+                    justify-content: space-between;
+                }
+            }
+        }
+        //adjustments for bs container max-width increase
+        @media (min-width: $bp-bs-xl) {
+            .current-bottle-details {
+                left: 13rem;
+            }
+            .bottle-indicator {
+                right: 27rem;
+            }
+            .bottle-nav {
+                left: 0;
+            }
+        }
+    }//.home-bottle-viewer
+    
+    //spinny arrow divider from top bottle viewer to next section
+    .arrow-spinner {
+        text-align: center;
+        margin: 0 0 2rem;
+        img {
+            max-width: 11rem;
+        }
+        @media (min-width: $bp-bs-md) {
+            margin: 3rem 0 4rem;
+        }
+        @media (min-width: $bp-1100) {
+            margin: 5rem 0 8rem;
+        }
+    }
+    
+    //styling for row spacing - want more than BS built in classes give, so i'm doing this custom
+    .row {
+        margin-bottom: 3rem;
+//        @media (min-width: $bp-bs-md) {
+//            margin-bottom: 5rem;
+//        }
+    }
+    //only row i don't want this margin on is header
+    .page-header {
+        .row {
+            margin-bottom: 0;
+        }
+    }
+    //max-width on headlines and body copy for this page
+    h2, h3, p, .text-button-container {
+        max-width: $bp-500;
+    }
+    //additional spacing in these sections
+    .img-full {
+        margin-bottom: 1rem;
+//        @media (min-width: $bp-bs-md) {
+//            margin-bottom: 3rem;
+//        }
+    }
+    .img-half {
+        margin-bottom: 4rem;
+        img {
+            width: 15rem;
+            @media (min-width: $bp-500) {
+                width: 20rem;
+            }
+            @media (min-width: $bp-bs-md) {
+                width: auto;
+            }
+        }
+    }
+    //base image styling
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+    //red and gold filigree box styles - base styles in global since it could be used elsewhere
+    .red-gold-text-container {
+        margin-bottom: 1.5rem;
+    }
+    .img-text-stack {
+        h3 {
+            margin-bottom: 0;
+        }
+        img {
+            margin-bottom: 1.5rem;
+            max-width: 30rem;
+        }
+    }
+    .align-left, .align-right {
+        margin: auto;
+        h2, h3, p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    //adjustments for when layout switches to two column
+    @media (min-width: $bp-bs-md) {
+        .align-left {
+            margin: 0;
+            margin-right: auto;
+            h2, h3, p {
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+        .align-right {
+            margin: 0;
+            margin-left: auto;
+            h2, h3, p {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+        .staggered-content {
+            margin-top: 6rem;
+        }
+        .red-gold-text-container {
+            margin-top: -6rem;
+//            margin-left: auto;
+//            margin-right: 6rem;
+        }
+        .img-text-stack {
+            img {
+                margin-bottom: 2rem;
+            }
+        }
+        //add maroon block
+        .maroon-block {
+            position: relative;
+            &:before {
+                content: '';
+                z-index: -1;
+                display: block;
+                background: url("../assets/img/photos/maroon-block-vertical.jpg") no-repeat;
+                background-size: cover;
+                width: 15%;
+                height: 40rem;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        .maroon-left {
+            &:before {
+                right: auto;
+                left: 0;
+            }
+        }
+        //add black block
+        .black-block {
+            position: relative;
+            &:before {
+                content: '';
+                z-index: -1;
+                display: block;
+                background: url("../assets/img/photos/black-block.jpg") no-repeat;
+                background-size: cover;
+                width: 25%;
+                height: 20rem;
+                position: absolute;
+                bottom: 5rem;
+                left: 0;
+            }
+        }
+    }
+    @media (min-width: $bp-1000) {
+        .red-gold-text-container {
+            margin-top: -15rem;
+            margin-right: 5rem;
+            margin-left: auto;
+        }
+        .maroon-block {
+            &:before {
+                width: 24%;
+                top: 10rem;
+                height: 60rem;
+            }
+        }
+        .maroon-left {
+            &:before {
+                height: 40rem;
+            }
+        }
+        .black-block {
+            &:before {
+                width: 35%;
+                height: 30rem;
+            }
+        }
+    }
+}

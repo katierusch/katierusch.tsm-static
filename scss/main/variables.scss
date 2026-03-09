@@ -1,0 +1,128 @@
+// color variables
+$c-cream: #F6EAD0;
+$c-maroon: #882335;
+$c-gold: #B29759;
+$c-darkgold: #84662B;
+$c-lightgold: #C0BA81;
+$c-orange: #8c4e20;
+$c-port: #6d2439;
+$c-black: #000;
+$c-white: #fff;
+$c-chardonnay: #575122;
+$c-midgray: #676069;
+$c-lightgray: #dbd7d5;
+
+//type variables
+$f-neutra: 'Neutra Text', Helvetica, Arial, Verdana, sans-serif;
+$f-horizontes: 'Horizontes Script';
+$f-coliseum: 'Coliseum Pro', Arial Narrow;
+$f-tsmicons: "tsm-icons" !default;
+
+//size variables
+$bp-300: 18.75rem;
+$bp-400: 25rem;
+$bp-500: 31.25rem;
+$bp-600: 37.5rem;
+$bp-700: 43.75rem;
+$bp-800: 50rem;
+$bp-900: 56.25rem;
+$bp-1000: 62.5rem;
+$bp-1100: 68.75rem;
+$bp-1200: 75rem;
+$bp-1300: 81.25rem;
+$bp-1400: 87.5rem;
+$bp-1500: 93.75rem;
+$bp-1600: 100rem;
+
+//bootstrap breakpoints
+$bp-bs-sm: 36rem; //576px
+$bp-bs-md: 48rem; //768px
+$bp-bs-lg: 62rem; //992px
+$bp-bs-xl: 75rem; //1200px
+
+//icon variables
+$icon-arrow-down: "\e900";
+$icon-arrow-left: "\e901";
+$icon-arrow-right: "\e902";
+$icon-arrow-up: "\e903";
+$icon-arrowhead-down: "\e904";
+$icon-arrowhead-left: "\e905";
+$icon-arrowhead-right: "\e906";
+$icon-arrowhead-up: "\e907";
+$icon-clover: "\e908";
+$icon-plus: "\ea0a";
+$icon-cancel-circle: "\ea0d";
+$icon-cross: "\ea0f";
+$icon-checkmark: "\ea10";
+$icon-checkmark2: "\ea11";
+$icon-checkbox-checked: "\ea52";
+$icon-checkbox-unchecked: "\ea53";
+$icon-radio-checked: "\ea54";
+$icon-radio-checked2: "\ea55";
+$icon-facebook: "\ea90";
+$icon-facebook2: "\ea91";
+$icon-instagram: "\ea92";
+$icon-twitter: "\ea96";
+$icon-youtube: "\ea9d";
+
+
+//mixins and animations
+
+//fade in animation keyframes
+@keyframes fade-in-animation{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+.fade-in {
+    animation: fade-in-animation 2s forwards;
+}
+// Type Scaling
+@mixin fluidTypeSize($_f-maxFont, $_f-minFont: 1, $_mq-maxWidth: 75, $_mq-minWidth: 20) {
+
+////// Description:
+  // - mixin to fluidly scale type from a minimum font size to a maximum font size, within a range of screen sizes, while maintaining ability for user to adjust preferred base font size
+  ////
+
+////// @param $_f-maxFont
+  // - the largest size that the type should be
+  // - should be a UNITLESS value (but will ultimately have rem appended)
+  // - REQUIRED parameter
+  ////
+
+////// @param $_f-minFont
+  // - the smallest size that the type should be
+  // - should be a UNITLESS value (but will ultimately have rem appended)
+  // - defaults to the root font size
+  ////
+
+////// @param $_mq-maxWidth
+  // - the screen size at which the max font size should be reached and the type should stop growing
+  // - should be a UNITLESS value (but will ultimately have em appended)
+  // - defaults to 75em (1200px)
+  ////
+
+////// @param $_mq-minWidth
+  // - the screen size at which the type should begin to scale from small to large
+  // - should be a UNITLESS value (but will ultimately have em appended)
+  // - defaults to 20em (320px)
+  ////
+
+////// Instructions:
+  // - Do not apply to the html or body elements
+  // - Reserve use for larger display type, not body type
+  ////
+
+  font-size: #{$_f-minFont}rem;
+  @media (min-width: #{$_mq-minWidth}rem) and (max-width: #{$_mq-maxWidth}rem) {
+    font-size: calc( #{$_f-minFont}rem + (#{$_f-maxFont} - #{$_f-minFont}) * ( (100vw - #{$_mq-minWidth}rem) / ( #{$_mq-maxWidth} - #{$_mq-minWidth}) ));
+  }
+  @media (min-width: #{$_mq-maxWidth}rem) {
+    font-size: #{$_f-maxFont}rem;
+  }
+}
+

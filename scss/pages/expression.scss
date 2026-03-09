@@ -1,0 +1,394 @@
+//layout adjustments specific to the expressions page
+@media (min-width: $bp-700) {
+    .page-expressions {
+        .page-header {
+        //pull bottle to the top of the page to cut the tip of the cap off.
+            margin-bottom: -6.25rem !important;
+        }
+    }
+}
+
+//keep expression details from getting sucked into header's negative margin when the layout shifts
+  @media (min-width: $bp-bs-md) {
+    .expression-details {
+        margin-top: 6.25rem;
+    }
+}
+
+//
+//bottle viewer styles
+//
+.tsm-bottle-viewer {
+    background: url("../assets/img/elements/TSM-frame.svg") no-repeat 50% 37%;
+    background-size: 80%;
+    text-align: center;
+    position: relative;
+    .hand-top {
+        display: inline-block;
+        position: relative;
+         //top hand positioning styles
+        &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 10;
+        }
+        //fingers on the top left
+        &:before {
+            background: url("../assets/img/photos/hand-top-left.png") no-repeat;
+            background-size: contain;
+            width: 14px;
+            height: 73px;
+            left: 0px;
+            top: 139px;
+            transform: rotate(-3deg);
+        }
+        //hand on the top right
+        &:after {
+            background: url("../assets/img/photos/hand-top-right.png") no-repeat;
+            background-size: contain;
+            width: 57px;
+            height: 126px;
+            right: -43px;
+            top: 155px;
+        }
+        img {
+            position: relative;
+            z-index: 20;
+        }
+    }
+    .hand-bottom {
+        position: relative;
+        //bottom hand positioning styles
+        &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 30;
+        }
+        //fingers on the bottom left
+        &:before {
+            background: url("../assets/img/photos/hand-bottom-fingers.png") no-repeat;
+            background-size: contain;
+            width: 41px;
+            height: 53px;
+            left: 4px;
+            bottom: -5px;
+            transform: rotate(-9deg);
+            //transform: rotate(-3deg);
+        }
+        //palm on the bottom right
+        &:after {
+            background: url("../assets/img/photos/hand-bottom-palm.png") no-repeat;
+            background-size: contain;
+            width: 143px;
+            height: 68px;
+            right: -57px;
+            bottom: -32px;
+        }
+    }
+    @media (min-width: $bp-500) {
+        background-size: 60%;
+    }
+    //adjust hand sizes/positions when bottle sizes up in browser.
+    @media (min-width: $bp-700) {
+        background-size: 75%;
+        background-position: center center;
+        margin-bottom: 4rem !important;
+        .hand-top {
+            &:before {
+                width: 27px;
+                height: 140px;
+                left: -1px;
+                top: 277px;
+            }
+            &:after {
+                width: 117px;
+                height: 247px;
+                right: -88px;
+                top: 317px;
+            }
+        }
+        .hand-bottom {
+            &:before {
+                width: 113px;
+                height: 108px;
+                left: 4px;
+                bottom: -12px;  
+            }
+            &:after {
+                width: 284px;
+                height: 138px;
+                right: -114px;
+                bottom: -72px;
+            }
+        }
+    } //$bp-700
+    
+    @media (min-width: $bp-bs-lg) {
+       max-width: $bp-800;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .bottle-nav {
+        margin-top: 2.5rem;
+
+    }
+      .bottle-indicator {
+            font-size: 1.5rem;
+            font-family: $f-coliseum;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - .5rem);
+            color: $c-maroon;
+            display: inline-block;
+        }
+    @media (min-width: $bp-bs-sm) {
+        .bottle-nav {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            ul {
+                li {
+                    &:first-of-type {
+                        margin-right: 13rem;
+                    }
+                }
+            }
+        }
+        .bottle-indicator {
+            font-size: 2rem;
+            bottom: 0;
+            left: 25%;
+            margin-bottom: 0;
+        }
+        
+    }
+    @media (min-width: $bp-700) {
+        .bottle-nav {
+            ul {
+                li {
+                    width: 8rem;
+                    &:first-of-type {
+                        margin-right: 18rem;
+                    }
+                    a {
+                        font-size: 1.75rem;
+                    }
+                }
+            }
+        }
+        .bottle-indicator {
+            bottom: 5rem;
+        }
+    }
+    @media (min-width: $bp-bs-lg) {
+        background-position: 50% 15%;
+        .bottle-nav {
+            top: 18%;
+        }
+        .bottle-indicator {
+            bottom: auto;
+            top: 38rem;
+        }
+    }
+} //.tsm-bottle-viewer
+
+
+//
+//expression details and awards container
+//
+
+.expression-details-awards {
+    padding: 0 !important;
+    
+}
+
+//expressions details black box
+.expression-details {
+    background: url("../assets/img/photos/expression-texture-m.jpg") no-repeat top right;
+    background-size: cover;
+    color: $c-white;
+    padding-bottom: 11rem !important;
+    img {
+        max-width: $bp-300;
+        margin-bottom: 1rem;
+    }
+    h2, h3, h4 {
+        color: $c-gold;
+    }
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+    h3 {
+        text-transform: none;
+        font-family: $f-neutra;
+        @include fluidTypeSize(1.7, 1.35)
+    }
+    .cask-details {
+        @include fluidTypeSize(1.25, 1)
+        margin-top: 0;
+    }
+    h4 {
+        font-weight: normal;
+        @include fluidTypeSize(1.5, 1.15)
+    }
+   
+    @media (min-width: $bp-600) {
+        background: url("../assets/img/photos/expression-texture-2x.jpg") no-repeat top right;
+        background-size: cover;
+
+    }
+    @media (min-width: $bp-bs-lg) {
+        //counteract header's negative margin to pull bottle up to top of page
+        margin-top: 6rem !important;
+    
+    }
+} //.expression-details
+
+
+//awards content
+.awards {
+    margin-top: -8rem;
+    h3 {
+        color: $c-gold;
+        margin-bottom: 1rem;
+    }
+    .awards-container {
+        margin-bottom: 1.5rem;
+    }
+    img {
+        width: 8.5rem;
+        height: 8.5rem;
+        display: inline-block;
+        margin-right: .5rem;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .awards-list {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1rem;
+        li {
+            padding-left: 1.5rem;
+            position: relative;
+            &:before {
+                content: $icon-clover;
+                font-family: $f-tsmicons;
+                font-size: .9rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        .gold-award {
+            &:before {
+                color: $c-gold;
+            }
+        }
+        .silver-award {
+            &:before {
+                color: $c-midgray;
+            }
+        }
+        .bronze-award {
+            &:before {
+                color: $c-orange;
+            }
+        }
+        .other-award {
+            &:before {
+                color: $c-maroon;
+            }
+        }
+    }
+}
+
+//
+//decorative stuff
+//
+
+//add in decorative details for this page
+@media (min-width: $bp-bs-lg) {
+    .page-expressions {
+      .page-footer {
+        position: relative;
+        &:after {
+            content: '';
+            background: url("../assets/img/elements/horse-gold.svg") no-repeat;
+            background-size: contain;
+            width: 20rem;
+            height: 20rem;
+            position: absolute;
+            top: -30rem;
+            left: 20%;
+        }
+    }  
+    } 
+}
+
+//maroon block
+@media (min-width: $bp-900) {
+    .page-expressions {
+        .page-main {
+            position: relative;
+            &:before {
+                content: '';
+                width: 15%;
+                height: 25rem;
+                background: url("../assets/img/photos/maroon-block.jpg") no-repeat;
+                background-size: cover;
+                display: block;
+                position: absolute;
+                left: 0rem;
+                bottom: 10rem;
+            }
+        }
+    }
+}
+
+
+@media (min-width: $bp-bs-lg) {
+    //adjust maroon block sizing
+    .page-expressions {
+        .page-main {
+            &:before {
+                width: 25%;
+                bottom: 33rem;
+            }
+        }
+    }
+    //add frame static image - FPO since we have to parallax this
+    .expression-details-awards {
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            width: 26rem;
+            height: 20rem;
+            background: url("../assets/img/photos/expression_FPO.png") no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: -28rem;
+            top: 47%
+        }
+    }
+}
+
+@media (min-width: $bp-1300) {
+    //adjust frame static FPO size and position
+    .expression-details-awards {
+        &:after {
+            width: 32rem;
+            height: 24rem;
+            left: -35rem;
+        }
+    }
+}
+
+
+
+
