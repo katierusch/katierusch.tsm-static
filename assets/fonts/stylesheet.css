@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Neutra Text';
+    src: url('NeutraText-Bold.woff2') format('woff2'),
+        url('NeutraText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Display';
+    src: url('NeutraDisp-Bold.woff2') format('woff2'),
+        url('NeutraDisp-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coliseum Pro';
+    src: url('ColiseumPro-Book.woff2') format('woff2'),
+        url('ColiseumPro-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Horizontes Script';
+    src: url('HorizontesScript-Bold.woff2') format('woff2'),
+        url('HorizontesScript-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Text';
+    src: url('NeutraText-Book.woff2') format('woff2'),
+        url('NeutraText-Book.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Text';
+    src: url('NeutraText-BookItalic.woff2') format('woff2'),
+        url('NeutraText-BookItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
